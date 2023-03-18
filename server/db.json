@@ -1,39 +1,25 @@
 {
   "jobs": [
     {
-      "title": "QA Engineer",
+      "title": "Full Stack Developer",
       "type": "Remote",
-      "salary": 3000,
-      "deadline": "2023-03-15",
-      "id": "lfcrkk9m"
+      "salary": 32131,
+      "deadline": "2023-03-20",
+      "id": "lfdmjc1b"
     },
     {
-      "title": "Software Engineer",
-      "type": "Remote",
-      "salary": 500,
-      "deadline": "2023-03-23",
-      "id": "lfcs8q2z"
-    },
-    {
-      "title": "Software Engineer",
+      "title": "Senior Executive",
       "type": "Internship",
-      "salary": 1000,
-      "deadline": "2023-03-26",
-      "id": "lfctl37b"
+      "salary": 45245,
+      "deadline": "2023-04-02",
+      "id": "lfdmjjjj"
     },
     {
-      "title": "Junior Executive",
+      "title": "DevOps Engineer",
       "type": "Full Time",
-      "salary": 3002,
-      "deadline": "2023-03-22",
-      "id": "lfctpg8z"
-    },
-    {
-      "title": "Android App Developer",
-      "type": "Internship",
-      "salary": 45,
-      "deadline": "2023-03-23",
-      "id": "lfctt16l"
+      "salary": 5255,
+      "deadline": "2023-03-16",
+      "id": "lfdmmsv8"
     }
   ]
 }

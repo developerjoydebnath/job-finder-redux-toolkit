@@ -25,7 +25,7 @@ const AddNewJobForm = () => {
       console.log(edit.salary);
       setTitle(edit.title);
       setType(edit.type);
-      setSalary(parseInt(edit.salary));
+      setSalary(Number(edit.salary));
       setDeadline(edit.deadline);
     }
   }, [edit]);
@@ -116,8 +116,8 @@ const AddNewJobForm = () => {
               required
               className="!rounded-l-none !border-0"
               placeholder="20,00,000"
-              value={parseInt(salary)}
-              onChange={(e) => setSalary(e.target.value)}
+              value={Number(salary)}
+              onChange={(e) => setSalary(Number(e.target.value))}
               min="1"
             />
           </div>

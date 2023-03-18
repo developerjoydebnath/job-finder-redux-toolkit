@@ -2,11 +2,12 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { edit } from '../features/filter/filterSlice';
+import { deleteJobs } from '../features/jobs/jobsSlice';
 
 const SingleJob = ({ job = {} }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { title, type, salary, deadline } = job;
+  const { title, type, salary, deadline, id } = job;
 
   // change the date format
   const dateObj = new Date(deadline);
@@ -16,6 +17,13 @@ const SingleJob = ({ job = {} }) => {
   const handleEditJob = () => {
     dispatch(edit(job));
     navigate(`/edit-job`);
+  };
+
+  const handleDeleteJob = (jobId) => {
+    const agreed = window.confirm('Are you sure you want to delete the job ?');
+    if (agreed) {
+      dispatch(deleteJobs(jobId));
+    }
   };
 
   return (
@@ -51,7 +59,7 @@ const SingleJob = ({ job = {} }) => {
         </span>
 
         <span className="sm:ml-3">
-          <button type="button" className="lws-delete btn btn-danger ">
+          <button type="button" className="lws-delete btn btn-danger " onClick={() => handleDeleteJob(id)}>
             <i className="fa-solid fa-trash text-gray-300 -ml-1 mr-2"></i>
             Delete
           </button>

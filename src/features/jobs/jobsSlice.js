@@ -85,6 +85,24 @@ const jobsSlice = createSlice({
         state.isLoading = false;
         state.isError = true;
         state.error = action.error?.message;
+      })
+      // delete a job
+      .addCase(deleteJobs.pending, (state) => {
+        state.isLoading = true;
+        state.isError = false;
+        state.error = '';
+      })
+      .addCase(deleteJobs.fulfilled, (state, action) => {
+        state.isLoading = false;
+        state.isError = false;
+        state.error = '';
+        const matchedJob = state.jobs.findIndex((job) => job.id === action.payload?.id);
+        state.jobs.splice(matchedJob, 1);
+      })
+      .addCase(deleteJobs.rejected, (state, action) => {
+        state.isLoading = false;
+        state.isError = true;
+        state.error = action.error?.message;
       });
   },
 });
