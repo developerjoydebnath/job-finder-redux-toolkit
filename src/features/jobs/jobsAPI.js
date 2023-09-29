@@ -2,7 +2,7 @@ import axiosInstance from '../../utils/Axios';
 
 export const getJobs = async () => {
   const response = await axiosInstance.get('/jobs');
-  return response.data;
+  return response.data.data;
 };
 
 export const removeJob = async (id) => {

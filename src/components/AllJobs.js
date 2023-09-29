@@ -20,7 +20,7 @@ const AllJobs = () => {
   if (!isLoading && !isError && jobs.length === 0) content = <div className="col-span-12">No jobs found.</div>;
   if (!isLoading && !isError && jobs.length > 0)
     content = jobs
-      .filter((job) => job.title.toLowerCase().includes(search.toLowerCase()))
+      .filter((job) => job.title?.toLowerCase().includes(search?.toLowerCase()))
       .filter((job) => {
         switch (status) {
           case 'All':
@@ -44,7 +44,7 @@ const AllJobs = () => {
           case 'Salary (Low to High)':
             return a.salary - b.salary;
           default:
-            break;
+            return jobs;
         }
       })
       .map((job) => <SingleJob key={job.id} job={job} />);

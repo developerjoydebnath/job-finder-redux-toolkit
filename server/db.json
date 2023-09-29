@@ -1,16 +1,9 @@
 {
   "jobs": [
     {
-      "title": "Full Stack Developer",
-      "type": "Remote",
-      "salary": 32131,
-      "deadline": "2023-03-20",
-      "id": "lfdmjc1b"
-    },
-    {
       "title": "Senior Executive",
-      "type": "Internship",
-      "salary": 45245,
+      "type": "Remote",
+      "salary": 1000,
       "deadline": "2023-04-02",
       "id": "lfdmjjjj"
     },
